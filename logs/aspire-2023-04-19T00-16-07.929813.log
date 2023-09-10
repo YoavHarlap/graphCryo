@@ -1,0 +1,7 @@
+2023-04-19 00:16:13,563 CRITICAL cannot import name 'DenoiserCov2D'
+Traceback:
+  File "/home/yoavharlap/PycharmProjects/graphCryo/after_data.py", line 1, in <module>
+    from classification_functions import *
+  File "/scratch/home/yoavharlap/PycharmProjects/graphCryo/classification_functions.py", line 33, in <module>
+    from aspire.denoising import DenoiserCov2D
+

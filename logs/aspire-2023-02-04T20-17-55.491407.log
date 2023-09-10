@@ -1,0 +1,49 @@
+2023-02-04 20:17:55,493 DEBUG [root] ASPIRE configuration directory is /home/yoavharlap/.config/ASPIRE
+2023-02-04 20:17:55,493 DEBUG [root] ASPIRE configuration resolution details [({'logging': {'log_dir': '/scratch/home/yoavharlap/PycharmProjects/graphCryo/logs'}}, ConfigSource(<super: <class 'ConfigSource'>, <ConfigSource object>>, None, False, False)), ({}, ConfigSource(<super: <class 'ConfigSource'>, <YamlSource object>>, '/home/yoavharlap/.config/ASPIRE/config.yaml', False, False)), ({'version': '0.10.1', 'common': OrderedDict([('numeric', 'numpy'), ('fft', 'pyfftw')]), 'logging': OrderedDict([('log_dir', 'logs'), ('log_exceptions', 1), ('tqdm_disable', False), ('console_level', 'INFO'), ('log_file_level', 'DEBUG'), ('log_prefix', 'aspire')]), 'nufft': OrderedDict([('backends', ['cufinufft', 'finufft', 'pynfft'])]), 'ray': OrderedDict([('temp_dir', '/tmp/ray')])}, ConfigSource(<super: <class 'ConfigSource'>, <YamlSource object>>, '/home/yoavharlap/.local/lib/python3.8/site-packages/aspire/config_default.yaml', True, False))]
+2023-02-04 20:17:55,494 DEBUG [root] Resolved config.yaml:
+
+logging:
+    log_dir: /scratch/home/yoavharlap/PycharmProjects/graphCryo/logs
+    log_exceptions: 1
+    tqdm_disable: no
+    console_level: INFO
+    log_file_level: DEBUG
+    log_prefix: aspire
+version: 0.10.1
+common:
+    numeric: numpy
+    fft: pyfftw
+
+nufft:
+    backends: [cufinufft, finufft, pynfft]
+
+ray:
+    temp_dir: /tmp/ray
+
+
+2023-02-04 20:17:59,307 INFO [aspire.volume.volume] /scratch/guysharon/Work/datafiles/volrefs/emd_2660.map with dtype float32 loaded as <class 'numpy.float64'>
+2023-02-04 20:17:59,441 INFO [__main__] Original volume map data shape: (1, 360, 360, 360) dtype:float64
+2023-02-04 20:18:20,975 INFO [__main__] Initialize CTF filters.
+2023-02-04 20:18:20,987 INFO [aspire.source.image] Creating Simulation with 2500 images.
+2023-02-04 20:18:21,078 INFO [aspire.source.simulation] Appending CustomNoiseAdder to generation pipeline
+2023-02-04 20:18:21,080 INFO [aspire.source.image] save metadata into STAR file
+2023-02-04 20:18:21,110 INFO [aspire.storage.starfile] Created StarFile with blocks: 
+2023-02-04 20:18:21,261 INFO [aspire.source.image] save images into MRCS file
+2023-02-04 20:18:21,322 INFO [aspire.source.image] Saving ImageSource[0-2499] to /home/yoavharlap/work/starfile_0_2499.mrcs
+2023-02-04 20:18:22,597 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-04 20:18:22,638 INFO [aspire.nufft] Trying NFFT backend cufinufft
+2023-02-04 20:18:22,641 INFO [aspire.nufft] NFFT backend cufinufft not usable:
+	No module named 'pycuda'
+2023-02-04 20:18:22,642 INFO [aspire.nufft] Trying NFFT backend finufft
+2023-02-04 20:18:22,700 INFO [aspire.nufft] NFFT backend finufft usable.
+2023-02-04 20:18:22,701 INFO [aspire.nufft] Trying NFFT backend pynfft
+2023-02-04 20:18:22,702 INFO [aspire.nufft] NFFT backend pynfft not usable:
+	No module named 'pynfft'
+2023-02-04 20:18:22,702 INFO [aspire.nufft] Selected NFFT backend = finufft.
+2023-02-04 20:20:22,562 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-04 20:20:22,562 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-04 20:20:26,482 INFO [src.cryo_signal_enhance]     Preparing starfile in the correct format...
+2023-02-04 20:20:26,893 INFO [src.cryo_signal_enhance]     adding phase-flip to pipeline...
+2023-02-04 20:20:26,896 INFO [src.cryo_signal_enhance]     adding downsample to pipeline (189->89)...
+2023-02-04 20:20:34,732 INFO [src.cryo_signal_enhance]     estimating white noise...
+2023-02-04 20:20:35,218 INFO [src.cryo_signal_enhance]     adding whiten to pipeline...

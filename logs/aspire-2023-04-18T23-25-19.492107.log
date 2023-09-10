@@ -1,0 +1,7 @@
+2023-04-18 23:25:21,975 CRITICAL cannot import name 'BFSReddyChatterjiAverager2D'
+Traceback:
+  File "/home/yoavharlap/PycharmProjects/graphCryo/after_data.py", line 1, in <module>
+    from classification_functions import *
+  File "/scratch/home/yoavharlap/PycharmProjects/graphCryo/classification_functions.py", line 32, in <module>
+    from aspire.classification import BFSReddyChatterjiAverager2D, RIRClass2D
+

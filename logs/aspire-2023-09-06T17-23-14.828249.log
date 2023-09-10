@@ -1,0 +1,17 @@
+2023-09-06 17:23:19,149 CRITICAL module 'src' has no attribute 'mrcfile'
+Traceback:
+  File "/home/yoavharlap/PycharmProjects/graphCryo/guy_and_big_dataset.py", line 48, in <module>
+    CreateStarFileFromImages_WithoutCTFData(starfile_fullpath, imgs)
+  File "/scratch/guysharon/Work/CryoEMSignalEnhancement/src/cryo_signal_enhance.py", line 1033, in CreateStarFileFromImages_WithoutCTFData
+    from src.aspire.image import Image
+  File "/scratch/guysharon/Work/CryoEMSignalEnhancement/src/aspire/image/__init__.py", line 1, in <module>
+    from .image import (
+  File "/scratch/guysharon/Work/CryoEMSignalEnhancement/src/aspire/image/image.py", line 4, in <module>
+    import src.mrcfile
+  File "/scratch/guysharon/Work/CryoEMSignalEnhancement/src/mrcfile/__init__.py", line 66, in <module>
+    from .load_functions import new, open, open_async, mmap, new_mmap
+  File "/scratch/guysharon/Work/CryoEMSignalEnhancement/src/mrcfile/load_functions.py", line 20, in <module>
+    from .bzip2mrcfile import Bzip2MrcFile
+  File "/scratch/guysharon/Work/CryoEMSignalEnhancement/src/mrcfile/bzip2mrcfile.py", line 23, in <module>
+    import src.mrcfile as mrcfile
+

@@ -1,0 +1,106 @@
+2023-01-29 02:30:56,894 DEBUG [root] ASPIRE configuration directory is /home/yoavharlap/.config/ASPIRE
+2023-01-29 02:30:56,894 DEBUG [root] ASPIRE configuration resolution details [({'logging': {'log_dir': '/scratch/home/yoavharlap/PycharmProjects/graphCryo/logs'}}, ConfigSource(<super: <class 'ConfigSource'>, <ConfigSource object>>, None, False, False)), ({}, ConfigSource(<super: <class 'ConfigSource'>, <YamlSource object>>, '/home/yoavharlap/.config/ASPIRE/config.yaml', False, False)), ({'version': '0.10.1', 'common': OrderedDict([('numeric', 'numpy'), ('fft', 'pyfftw')]), 'logging': OrderedDict([('log_dir', 'logs'), ('log_exceptions', 1), ('tqdm_disable', False), ('console_level', 'INFO'), ('log_file_level', 'DEBUG'), ('log_prefix', 'aspire')]), 'nufft': OrderedDict([('backends', ['cufinufft', 'finufft', 'pynfft'])]), 'ray': OrderedDict([('temp_dir', '/tmp/ray')])}, ConfigSource(<super: <class 'ConfigSource'>, <YamlSource object>>, '/home/yoavharlap/.local/lib/python3.8/site-packages/aspire/config_default.yaml', True, False))]
+2023-01-29 02:30:56,896 DEBUG [root] Resolved config.yaml:
+
+logging:
+    log_dir: /scratch/home/yoavharlap/PycharmProjects/graphCryo/logs
+    log_exceptions: 1
+    tqdm_disable: no
+    console_level: INFO
+    log_file_level: DEBUG
+    log_prefix: aspire
+version: 0.10.1
+common:
+    numeric: numpy
+    fft: pyfftw
+
+nufft:
+    backends: [cufinufft, finufft, pynfft]
+
+ray:
+    temp_dir: /tmp/ray
+
+
+2023-01-29 02:31:00,797 INFO [aspire.volume.volume] /scratch/guysharon/Work/datafiles/volrefs/emd_2660.map with dtype float32 loaded as <class 'numpy.float64'>
+2023-01-29 02:31:00,929 INFO [__main__] Original volume map data shape: (1, 360, 360, 360) dtype:float64
+2023-01-29 02:31:01,791 INFO [__main__] Initialize CTF filters.
+2023-01-29 02:31:01,804 INFO [aspire.source.image] Creating Simulation with 50000 images.
+2023-01-29 02:31:01,941 INFO [aspire.source.simulation] Appending CustomNoiseAdder to generation pipeline
+2023-01-29 02:31:01,943 INFO [aspire.source.image] save metadata into STAR file
+2023-01-29 02:31:02,536 INFO [aspire.storage.starfile] Created StarFile with blocks: 
+2023-01-29 02:36:01,674 INFO [aspire.volume.volume] /scratch/guysharon/Work/datafiles/volrefs/emd_2660.map with dtype float32 loaded as <class 'numpy.float64'>
+2023-01-29 02:36:01,809 INFO [__main__] Original volume map data shape: (1, 360, 360, 360) dtype:float64
+2023-01-29 02:36:02,660 INFO [__main__] Initialize CTF filters.
+2023-01-29 02:36:02,671 INFO [aspire.source.image] Creating Simulation with 50000 images.
+2023-01-29 02:36:02,809 INFO [aspire.source.simulation] Appending CustomNoiseAdder to generation pipeline
+2023-01-29 02:36:02,811 INFO [aspire.source.image] save metadata into STAR file
+2023-01-29 02:36:03,402 INFO [aspire.storage.starfile] Created StarFile with blocks: 
+2023-01-29 02:40:42,787 INFO [aspire.volume.volume] /scratch/guysharon/Work/datafiles/volrefs/emd_2660.map with dtype float32 loaded as <class 'numpy.float64'>
+2023-01-29 02:40:42,917 INFO [__main__] Original volume map data shape: (1, 360, 360, 360) dtype:float64
+2023-01-29 02:40:43,763 INFO [__main__] Initialize CTF filters.
+2023-01-29 02:40:43,773 INFO [aspire.source.image] Creating Simulation with 50000 images.
+2023-01-29 02:40:43,908 INFO [aspire.source.simulation] Appending CustomNoiseAdder to generation pipeline
+2023-01-29 02:40:43,910 INFO [aspire.source.image] save metadata into STAR file
+2023-01-29 02:40:44,485 INFO [aspire.storage.starfile] Created StarFile with blocks: 
+2023-01-29 11:19:48,337 INFO [aspire.volume.volume] /scratch/guysharon/Work/datafiles/volrefs/emd_2660.map with dtype float32 loaded as <class 'numpy.float64'>
+2023-01-29 11:19:48,466 INFO [__main__] Original volume map data shape: (1, 360, 360, 360) dtype:float64
+2023-01-29 11:19:49,311 INFO [__main__] Initialize CTF filters.
+2023-01-29 11:19:49,320 INFO [aspire.source.image] Creating Simulation with 50000 images.
+2023-01-29 11:19:49,453 INFO [aspire.source.simulation] Appending CustomNoiseAdder to generation pipeline
+2023-01-29 11:19:49,455 INFO [aspire.source.image] save metadata into STAR file
+2023-01-29 11:19:50,018 INFO [aspire.storage.starfile] Created StarFile with blocks: 
+2023-01-29 11:24:12,476 INFO [aspire.volume.volume] /scratch/guysharon/Work/datafiles/volrefs/emd_2660.map with dtype float32 loaded as <class 'numpy.float64'>
+2023-01-29 11:24:12,609 INFO [__main__] Original volume map data shape: (1, 360, 360, 360) dtype:float64
+2023-01-29 11:24:13,467 INFO [__main__] Initialize CTF filters.
+2023-01-29 11:24:13,477 INFO [aspire.source.image] Creating Simulation with 50000 images.
+2023-01-29 11:24:13,612 INFO [aspire.source.simulation] Appending CustomNoiseAdder to generation pipeline
+2023-01-29 11:24:13,613 INFO [aspire.source.image] save metadata into STAR file
+2023-01-29 11:24:14,106 INFO [aspire.storage.starfile] Created StarFile with blocks: 
+2023-01-29 11:24:14,509 INFO [aspire.source.image] save images into MRCS file
+2023-01-29 11:24:14,515 INFO [aspire.source.image] Saving ImageSource[0-49999] to /data/yoavharlap/mydata/starfile_0_49999.mrcs
+2023-01-29 11:24:45,691 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-01-29 11:24:45,733 INFO [aspire.nufft] Trying NFFT backend cufinufft
+2023-01-29 11:24:45,740 INFO [aspire.nufft] NFFT backend cufinufft not usable:
+	No module named 'pycuda'
+2023-01-29 11:24:45,741 INFO [aspire.nufft] Trying NFFT backend finufft
+2023-01-29 11:24:45,771 INFO [aspire.nufft] NFFT backend finufft usable.
+2023-01-29 11:24:45,771 INFO [aspire.nufft] Trying NFFT backend pynfft
+2023-01-29 11:24:45,772 INFO [aspire.nufft] NFFT backend pynfft not usable:
+	No module named 'pynfft'
+2023-01-29 11:24:45,773 INFO [aspire.nufft] Selected NFFT backend = finufft.
+2023-01-29 11:25:56,538 INFO [aspire.volume.volume] /scratch/guysharon/Work/datafiles/volrefs/emd_2660.map with dtype float32 loaded as <class 'numpy.float64'>
+2023-01-29 11:25:56,679 INFO [__main__] Original volume map data shape: (1, 360, 360, 360) dtype:float64
+2023-01-29 11:25:57,571 INFO [__main__] Initialize CTF filters.
+2023-01-29 11:25:57,573 INFO [aspire.source.image] Creating Simulation with 5000 images.
+2023-01-29 11:25:57,605 INFO [aspire.source.simulation] Appending CustomNoiseAdder to generation pipeline
+2023-01-29 11:25:57,606 INFO [aspire.source.image] save metadata into STAR file
+2023-01-29 11:25:57,689 INFO [aspire.storage.starfile] Created StarFile with blocks: 
+2023-01-29 11:25:57,716 INFO [aspire.source.image] save images into MRCS file
+2023-01-29 11:25:57,719 INFO [aspire.source.image] Saving ImageSource[0-4999] to /data/yoavharlap/mydata/starfile_0_4999.mrcs
+2023-01-29 11:26:01,028 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-01-29 11:28:24,261 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-01-29 11:28:24,261 DEBUG [aspire.image.xform] All forward transformations applied
+2023-01-29 11:47:07,499 INFO [aspire.volume.volume] /scratch/guysharon/Work/datafiles/volrefs/emd_2660.map with dtype float32 loaded as <class 'numpy.float64'>
+2023-01-29 11:47:07,627 INFO [__main__] Original volume map data shape: (1, 360, 360, 360) dtype:float64
+2023-01-29 11:47:08,459 INFO [__main__] Initialize CTF filters.
+2023-01-29 11:47:08,460 INFO [aspire.source.image] Creating Simulation with 100 images.
+2023-01-29 11:47:08,480 INFO [aspire.source.simulation] Appending CustomNoiseAdder to generation pipeline
+2023-01-29 11:47:08,481 INFO [aspire.source.image] save metadata into STAR file
+2023-01-29 11:47:08,487 INFO [aspire.storage.starfile] Created StarFile with blocks: 
+2023-01-29 11:47:08,491 INFO [aspire.source.image] save images into MRCS file
+2023-01-29 11:47:08,494 INFO [aspire.source.image] Saving ImageSource[0-99] to /data/yoavharlap/mydata/starfile_0_99.mrcs
+2023-01-29 11:47:08,571 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-01-29 11:47:12,041 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-01-29 11:47:12,042 DEBUG [aspire.image.xform] All forward transformations applied
+2023-01-29 12:07:16,580 INFO [aspire.volume.volume] /scratch/guysharon/Work/datafiles/volrefs/emd_2660.map with dtype float32 loaded as <class 'numpy.float64'>
+2023-01-29 12:07:16,709 INFO [__main__] Original volume map data shape: (1, 360, 360, 360) dtype:float64
+2023-01-29 12:07:17,547 INFO [__main__] Initialize CTF filters.
+2023-01-29 12:07:17,548 INFO [aspire.source.image] Creating Simulation with 100 images.
+2023-01-29 12:07:17,568 INFO [aspire.source.simulation] Appending CustomNoiseAdder to generation pipeline
+2023-01-29 12:07:17,569 INFO [aspire.source.image] save metadata into STAR file
+2023-01-29 12:07:17,575 INFO [aspire.storage.starfile] Created StarFile with blocks: 
+2023-01-29 12:07:17,579 INFO [aspire.source.image] save images into MRCS file
+2023-01-29 12:07:17,582 INFO [aspire.source.image] Saving ImageSource[0-99] to /data/yoavharlap/mydata/starfile_0_99.mrcs
+2023-01-29 12:07:17,656 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-01-29 12:07:21,118 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-01-29 12:07:21,119 DEBUG [aspire.image.xform] All forward transformations applied

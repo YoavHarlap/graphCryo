@@ -1,0 +1,56 @@
+2023-03-05 16:15:36,160 DEBUG [root] ASPIRE configuration directory is /home/yoavharlap/.config/ASPIRE
+2023-03-05 16:15:36,160 DEBUG [root] ASPIRE configuration resolution details [({'logging': {'log_dir': '/scratch/home/yoavharlap/PycharmProjects/graphCryo/logs'}}, ConfigSource(<super: <class 'ConfigSource'>, <ConfigSource object>>, None, False, False)), ({}, ConfigSource(<super: <class 'ConfigSource'>, <YamlSource object>>, '/home/yoavharlap/.config/ASPIRE/config.yaml', False, False)), ({'version': '0.10.1', 'common': OrderedDict([('numeric', 'numpy'), ('fft', 'pyfftw')]), 'logging': OrderedDict([('log_dir', 'logs'), ('log_exceptions', 1), ('tqdm_disable', False), ('console_level', 'INFO'), ('log_file_level', 'DEBUG'), ('log_prefix', 'aspire')]), 'nufft': OrderedDict([('backends', ['cufinufft', 'finufft', 'pynfft'])]), 'ray': OrderedDict([('temp_dir', '/tmp/ray')])}, ConfigSource(<super: <class 'ConfigSource'>, <YamlSource object>>, '/home/yoavharlap/.local/lib/python3.8/site-packages/aspire/config_default.yaml', True, False))]
+2023-03-05 16:15:36,163 DEBUG [root] Resolved config.yaml:
+
+logging:
+    log_dir: /scratch/home/yoavharlap/PycharmProjects/graphCryo/logs
+    log_exceptions: 1
+    tqdm_disable: no
+    console_level: INFO
+    log_file_level: DEBUG
+    log_prefix: aspire
+version: 0.10.1
+common:
+    numeric: numpy
+    fft: pyfftw
+
+nufft:
+    backends: [cufinufft, finufft, pynfft]
+
+ray:
+    temp_dir: /tmp/ray
+
+
+2023-03-05 16:15:39,463 INFO [aspire.volume.volume] /scratch/guysharon/Work/datafiles/volrefs/emd_2660.map with dtype float32 loaded as <class 'numpy.float64'>
+2023-03-05 16:15:39,609 INFO [__main__] Original volume map data shape: (1, 360, 360, 360) dtype:float64
+2023-03-05 16:16:02,248 INFO [__main__] Initialize CTF filters.
+2023-03-05 16:16:02,251 INFO [aspire.source.image] Creating Simulation with 4 images.
+2023-03-05 16:16:02,267 INFO [aspire.source.simulation] Appending CustomNoiseAdder to generation pipeline
+2023-03-05 16:16:02,269 INFO [aspire.source.image] save metadata into STAR file
+2023-03-05 16:16:02,274 INFO [aspire.storage.starfile] Created StarFile with blocks: 
+2023-03-05 16:16:02,275 INFO [aspire.source.image] save images into MRCS file
+2023-03-05 16:16:02,322 INFO [aspire.source.image] Saving ImageSource[0-3] to /home/yoavharlap/work/starfile_0_3.mrcs
+2023-03-05 16:16:02,338 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-03-05 16:16:02,381 INFO [aspire.nufft] Trying NFFT backend cufinufft
+2023-03-05 16:16:02,384 INFO [aspire.nufft] NFFT backend cufinufft not usable:
+	No module named 'pycuda'
+2023-03-05 16:16:02,385 INFO [aspire.nufft] Trying NFFT backend finufft
+2023-03-05 16:16:02,391 INFO [aspire.nufft] NFFT backend finufft usable.
+2023-03-05 16:16:02,392 INFO [aspire.nufft] Trying NFFT backend pynfft
+2023-03-05 16:16:02,394 INFO [aspire.nufft] NFFT backend pynfft not usable:
+	No module named 'pynfft'
+2023-03-05 16:16:02,395 INFO [aspire.nufft] Selected NFFT backend = finufft.
+2023-03-05 16:16:04,127 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-03-05 16:16:04,127 DEBUG [aspire.image.xform] All forward transformations applied
+2023-03-05 16:16:04,259 INFO [src.cryo_signal_enhance]     Preparing starfile in the correct format...
+2023-03-05 16:16:04,272 INFO [src.cryo_signal_enhance]     adding phase-flip to pipeline...
+2023-03-05 16:16:04,274 INFO [src.cryo_signal_enhance]     adding downsample to pipeline (189->189)...
+2023-03-05 16:16:04,512 INFO [src.cryo_signal_enhance]     estimating white noise...
+2023-03-05 16:16:04,522 INFO [src.cryo_signal_enhance]     adding whiten to pipeline...
+2023-03-05 16:16:28,234 INFO [src.cryo_signal_enhance]     received 4 coefficient vectors of size 1500...
+2023-03-05 16:22:31,865 INFO [src.cryo_signal_enhance]     Preparing starfile in the correct format...
+2023-03-05 16:22:31,879 INFO [src.cryo_signal_enhance]     adding phase-flip to pipeline...
+2023-03-05 16:22:31,882 INFO [src.cryo_signal_enhance]     adding downsample to pipeline (189->189)...
+2023-03-05 16:22:31,949 INFO [src.cryo_signal_enhance]     estimating white noise...
+2023-03-05 16:22:31,958 INFO [src.cryo_signal_enhance]     adding whiten to pipeline...
+2023-03-05 16:22:57,699 INFO [src.cryo_signal_enhance]     received 4 coefficient vectors of size 1500...

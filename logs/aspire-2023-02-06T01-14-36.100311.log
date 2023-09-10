@@ -1,0 +1,507 @@
+2023-02-06 01:14:36,101 DEBUG [root] ASPIRE configuration directory is /home/yoavharlap/.config/ASPIRE
+2023-02-06 01:14:36,101 DEBUG [root] ASPIRE configuration resolution details [({'logging': {'log_dir': '/scratch/home/yoavharlap/PycharmProjects/graphCryo/logs'}}, ConfigSource(<super: <class 'ConfigSource'>, <ConfigSource object>>, None, False, False)), ({}, ConfigSource(<super: <class 'ConfigSource'>, <YamlSource object>>, '/home/yoavharlap/.config/ASPIRE/config.yaml', False, False)), ({'version': '0.10.1', 'common': OrderedDict([('numeric', 'numpy'), ('fft', 'pyfftw')]), 'logging': OrderedDict([('log_dir', 'logs'), ('log_exceptions', 1), ('tqdm_disable', False), ('console_level', 'INFO'), ('log_file_level', 'DEBUG'), ('log_prefix', 'aspire')]), 'nufft': OrderedDict([('backends', ['cufinufft', 'finufft', 'pynfft'])]), 'ray': OrderedDict([('temp_dir', '/tmp/ray')])}, ConfigSource(<super: <class 'ConfigSource'>, <YamlSource object>>, '/home/yoavharlap/.local/lib/python3.8/site-packages/aspire/config_default.yaml', True, False))]
+2023-02-06 01:14:36,103 DEBUG [root] Resolved config.yaml:
+
+logging:
+    log_dir: /scratch/home/yoavharlap/PycharmProjects/graphCryo/logs
+    log_exceptions: 1
+    tqdm_disable: no
+    console_level: INFO
+    log_file_level: DEBUG
+    log_prefix: aspire
+version: 0.10.1
+common:
+    numeric: numpy
+    fft: pyfftw
+
+nufft:
+    backends: [cufinufft, finufft, pynfft]
+
+ray:
+    temp_dir: /tmp/ray
+
+
+2023-02-06 01:14:39,490 INFO [aspire.volume.volume] /scratch/guysharon/Work/datafiles/volrefs/emd_2660.map with dtype float32 loaded as <class 'numpy.float64'>
+2023-02-06 01:14:39,627 INFO [__main__] Original volume map data shape: (1, 360, 360, 360) dtype:float64
+2023-02-06 01:14:55,389 INFO [__main__] Initialize CTF filters.
+2023-02-06 01:14:55,395 INFO [aspire.source.image] Creating Simulation with 5000 images.
+2023-02-06 01:14:55,422 INFO [aspire.source.simulation] Appending CustomNoiseAdder to generation pipeline
+2023-02-06 01:14:55,435 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:14:55,435 INFO [aspire.nufft] Trying NFFT backend cufinufft
+2023-02-06 01:14:55,438 INFO [aspire.nufft] NFFT backend cufinufft not usable:
+	No module named 'pycuda'
+2023-02-06 01:14:55,439 INFO [aspire.nufft] Trying NFFT backend finufft
+2023-02-06 01:14:55,445 INFO [aspire.nufft] NFFT backend finufft usable.
+2023-02-06 01:14:55,446 INFO [aspire.nufft] Trying NFFT backend pynfft
+2023-02-06 01:14:55,447 INFO [aspire.nufft] NFFT backend pynfft not usable:
+	No module named 'pynfft'
+2023-02-06 01:14:55,448 INFO [aspire.nufft] Selected NFFT backend = finufft.
+2023-02-06 01:14:55,995 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:14:55,995 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:16:09,794 INFO [aspire.volume.volume] /scratch/guysharon/Work/datafiles/volrefs/emd_2660.map with dtype float32 loaded as <class 'numpy.float64'>
+2023-02-06 01:16:09,929 INFO [__main__] Original volume map data shape: (1, 360, 360, 360) dtype:float64
+2023-02-06 01:16:10,663 INFO [__main__] Initialize CTF filters.
+2023-02-06 01:16:10,668 INFO [aspire.source.image] Creating Simulation with 5000 images.
+2023-02-06 01:16:10,692 INFO [aspire.source.simulation] Appending CustomNoiseAdder to generation pipeline
+2023-02-06 01:16:10,700 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:16:11,043 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:16:11,043 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:17:00,801 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:05,116 INFO [aspire.volume.volume] /scratch/guysharon/Work/datafiles/volrefs/emd_2660.map with dtype float32 loaded as <class 'numpy.float64'>
+2023-02-06 01:19:05,253 INFO [__main__] Original volume map data shape: (1, 360, 360, 360) dtype:float64
+2023-02-06 01:19:05,978 INFO [__main__] Initialize CTF filters.
+2023-02-06 01:19:05,982 INFO [aspire.source.image] Creating Simulation with 5000 images.
+2023-02-06 01:19:06,005 INFO [aspire.source.simulation] Appending CustomNoiseAdder to generation pipeline
+2023-02-06 01:19:06,012 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:06,188 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:06,190 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:06,196 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:06,281 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:06,282 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:06,287 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:06,370 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:06,370 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:06,375 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:06,444 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:06,445 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:06,449 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:06,534 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:06,534 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:06,539 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:06,619 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:06,619 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:06,624 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:06,712 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:06,712 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:06,715 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:06,798 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:06,798 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:06,803 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:06,884 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:06,884 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:06,888 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:06,957 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:06,957 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:06,961 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:07,047 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:07,047 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:07,050 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:07,127 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:07,127 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:07,130 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:07,210 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:07,210 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:07,214 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:07,282 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:07,282 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:07,285 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:07,368 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:07,368 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:07,371 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:07,450 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:07,450 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:07,453 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:07,531 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:07,531 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:07,535 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:07,599 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:07,599 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:07,603 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:07,686 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:07,687 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:07,691 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:07,778 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:07,779 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:07,782 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:07,849 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:07,849 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:07,852 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:07,934 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:07,935 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:07,942 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:08,018 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:08,018 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:08,021 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:08,104 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:08,104 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:08,108 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:08,186 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:08,186 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:08,190 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:08,258 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:08,259 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:08,264 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:08,350 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:08,350 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:08,354 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:08,444 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:08,444 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:08,450 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:08,542 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:08,542 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:08,558 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:08,623 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:08,623 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:08,626 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:08,695 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:08,695 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:08,698 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:08,767 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:08,767 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:08,770 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:08,847 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:08,847 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:08,851 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:08,919 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:08,919 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:08,922 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:09,003 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:09,003 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:09,006 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:09,089 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:09,089 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:09,093 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:09,167 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:09,167 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:09,171 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:09,258 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:09,258 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:09,260 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:09,336 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:09,336 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:09,341 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:09,416 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:09,416 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:09,420 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:09,492 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:09,492 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:09,496 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:09,573 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:09,573 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:09,577 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:09,654 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:09,654 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:09,658 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:09,727 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:09,727 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:09,730 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:09,817 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:09,817 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:09,823 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:09,905 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:09,906 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:09,909 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:10,005 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:10,005 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:10,009 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:10,082 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:10,082 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:10,085 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:10,158 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:10,158 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:10,160 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:10,232 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:10,232 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:10,236 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:10,333 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:10,333 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:10,338 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:10,417 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:10,417 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:10,421 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:10,511 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:10,512 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:10,518 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:10,616 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:10,616 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:10,622 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:10,693 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:10,693 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:10,697 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:10,777 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:10,777 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:10,784 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:10,867 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:10,867 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:10,872 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:10,956 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:10,957 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:10,961 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:11,046 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:11,046 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:11,050 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:11,141 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:11,141 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:11,146 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:11,226 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:11,226 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:11,230 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:11,301 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:11,302 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:11,305 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:11,379 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:11,379 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:11,386 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:11,474 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:11,475 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:11,478 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:11,552 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:11,552 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:11,557 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:11,636 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:11,636 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:11,640 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:11,731 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:11,731 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:11,735 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:11,818 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:11,818 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:11,823 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:11,923 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:11,923 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:11,931 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:12,043 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:12,045 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:12,054 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:12,148 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:12,148 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:12,152 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:12,267 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:12,267 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:12,271 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:12,352 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:12,352 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:12,356 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:12,441 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:12,442 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:12,448 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:12,578 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:12,579 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:12,586 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:12,678 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:12,678 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:12,682 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:12,808 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:12,808 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:12,812 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:12,917 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:12,917 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:12,921 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:13,022 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:13,022 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:13,027 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:13,127 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:13,127 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:13,131 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:13,253 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:13,253 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:13,257 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:13,362 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:13,362 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:13,365 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:13,447 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:13,448 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:13,452 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:13,548 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:13,548 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:13,553 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:13,674 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:13,674 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:13,677 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:13,782 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:13,782 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:13,791 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:13,866 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:13,866 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:13,870 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:13,992 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:13,992 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:13,995 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:14,074 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:14,074 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:14,078 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:14,164 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:14,165 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:14,168 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:14,263 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:14,263 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:14,267 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:14,371 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:14,372 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:14,375 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:14,452 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:14,452 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:14,458 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:14,544 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:14,544 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:14,548 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:14,656 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:14,656 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:14,661 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:14,789 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:14,790 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:14,796 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:14,881 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:14,881 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:14,886 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:14,987 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:14,987 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:14,992 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:15,070 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:15,070 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:15,074 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:15,176 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:15,176 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:15,180 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:15,262 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:15,263 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:15,267 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:15,379 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:15,379 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:15,382 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:15,470 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:15,471 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:15,475 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:15,552 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:15,552 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:15,556 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:15,638 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:15,638 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:15,644 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:15,733 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:15,733 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:15,738 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:15,837 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:15,837 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:15,846 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:15,928 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:15,928 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:15,932 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:16,026 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:16,026 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:16,029 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:16,114 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:16,115 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:16,120 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:16,201 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:16,202 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:16,205 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:16,289 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:16,289 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:16,292 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:16,388 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:16,388 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:16,401 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:16,488 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:16,488 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:16,496 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:16,574 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:16,574 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:16,578 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:16,671 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:16,671 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:16,687 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:16,767 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:16,767 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:16,771 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:16,869 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:16,869 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:16,878 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:16,961 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:16,961 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:16,965 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:17,037 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:17,037 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:17,040 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:17,123 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:17,124 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:17,127 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:17,214 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:17,215 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:17,218 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:17,289 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:17,289 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:17,293 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:17,390 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:17,390 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:17,396 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:17,476 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:17,477 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:17,481 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:17,553 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:17,554 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:17,560 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:17,650 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:17,650 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:17,653 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:17,728 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:17,728 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:17,732 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:17,805 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:17,806 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:17,809 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:17,888 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:17,888 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:17,892 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:17,986 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:17,986 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:17,986 INFO [aspire.source.image] save metadata into STAR file
+2023-02-06 01:19:18,141 INFO [aspire.storage.starfile] Created StarFile with blocks: 
+2023-02-06 01:19:18,179 INFO [aspire.source.image] save images into MRCS file
+2023-02-06 01:19:18,219 INFO [aspire.source.image] Saving ImageSource[0-4999] to /home/yoavharlap/work/starfile_0_4999.mrcs
+2023-02-06 01:19:18,307 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-02-06 01:19:50,384 DEBUG [aspire.image.xform] Applying forward transformations in pipeline
+2023-02-06 01:19:50,384 DEBUG [aspire.image.xform] All forward transformations applied
+2023-02-06 01:19:50,845 INFO [src.cryo_signal_enhance]     Preparing starfile in the correct format...
+2023-02-06 01:19:51,142 INFO [src.cryo_signal_enhance]     adding phase-flip to pipeline...
+2023-02-06 01:19:51,146 INFO [src.cryo_signal_enhance]     adding downsample to pipeline (28->28)...
+2023-02-06 01:19:52,955 INFO [src.cryo_signal_enhance]     estimating white noise...
+2023-02-06 01:19:53,030 INFO [src.cryo_signal_enhance]     adding whiten to pipeline...
+2023-02-06 01:19:55,999 INFO [src.cryo_signal_enhance]     received 5000 coefficient vectors of size 238...
+2023-02-06 01:33:48,001 INFO [src.cryo_signal_enhance]     Preparing starfile in the correct format...
+2023-02-06 01:33:48,290 INFO [src.cryo_signal_enhance]     adding phase-flip to pipeline...
+2023-02-06 01:33:48,294 INFO [src.cryo_signal_enhance]     adding downsample to pipeline (28->28)...
+2023-02-06 01:33:49,887 INFO [src.cryo_signal_enhance]     estimating white noise...
+2023-02-06 01:33:49,955 INFO [src.cryo_signal_enhance]     adding whiten to pipeline...
+2023-02-06 01:40:32,228 INFO [src.cryo_signal_enhance]     Preparing starfile in the correct format...
+2023-02-06 01:40:32,513 INFO [src.cryo_signal_enhance]     adding phase-flip to pipeline...
+2023-02-06 01:40:32,516 INFO [src.cryo_signal_enhance]     adding downsample to pipeline (28->28)...
+2023-02-06 01:40:34,178 INFO [src.cryo_signal_enhance]     estimating white noise...
+2023-02-06 01:40:34,254 INFO [src.cryo_signal_enhance]     adding whiten to pipeline...
+2023-02-06 01:40:35,442 INFO [src.cryo_signal_enhance]     received 5000 coefficient vectors of size 238...
+2023-02-06 02:27:17,203 INFO [src.cryo_signal_enhance]     Preparing starfile in the correct format...
+2023-02-06 02:27:17,489 INFO [src.cryo_signal_enhance]     adding phase-flip to pipeline...
+2023-02-06 02:27:17,493 INFO [src.cryo_signal_enhance]     adding downsample to pipeline (28->28)...
+2023-02-06 02:27:19,381 INFO [src.cryo_signal_enhance]     estimating white noise...
+2023-02-06 02:27:19,450 INFO [src.cryo_signal_enhance]     adding whiten to pipeline...
+2023-02-06 02:27:20,661 INFO [src.cryo_signal_enhance]     received 5000 coefficient vectors of size 238...
+2023-02-06 02:47:37,806 INFO [src.cryo_signal_enhance]     Preparing starfile in the correct format...
+2023-02-06 02:47:38,145 INFO [src.cryo_signal_enhance]     adding phase-flip to pipeline...
+2023-02-06 02:47:38,149 INFO [src.cryo_signal_enhance]     adding downsample to pipeline (28->28)...
+2023-02-06 02:47:40,160 INFO [src.cryo_signal_enhance]     estimating white noise...
+2023-02-06 02:47:40,232 INFO [src.cryo_signal_enhance]     adding whiten to pipeline...
+2023-02-06 02:47:41,401 INFO [src.cryo_signal_enhance]     received 5000 coefficient vectors of size 238...
+2023-02-06 02:54:35,699 INFO [src.cryo_signal_enhance]     Preparing starfile in the correct format...
+2023-02-06 02:54:35,978 INFO [src.cryo_signal_enhance]     adding phase-flip to pipeline...
+2023-02-06 02:54:35,982 INFO [src.cryo_signal_enhance]     adding downsample to pipeline (28->28)...
+2023-02-06 02:54:37,534 INFO [src.cryo_signal_enhance]     estimating white noise...
+2023-02-06 02:54:37,601 INFO [src.cryo_signal_enhance]     adding whiten to pipeline...
+2023-02-06 02:54:50,576 INFO [src.cryo_signal_enhance]     received 5000 coefficient vectors of size 238...
+2023-02-06 02:56:01,667 INFO [src.cryo_signal_enhance]     Preparing starfile in the correct format...
+2023-02-06 02:56:01,972 INFO [src.cryo_signal_enhance]     adding phase-flip to pipeline...
+2023-02-06 02:56:01,976 INFO [src.cryo_signal_enhance]     adding downsample to pipeline (28->28)...
+2023-02-06 02:56:03,651 INFO [src.cryo_signal_enhance]     estimating white noise...
+2023-02-06 02:56:03,729 INFO [src.cryo_signal_enhance]     adding whiten to pipeline...
+2023-02-06 02:56:18,724 INFO [src.cryo_signal_enhance]     received 5000 coefficient vectors of size 238...
+2023-02-06 02:59:54,959 INFO [src.cryo_signal_enhance]     Preparing starfile in the correct format...
+2023-02-06 02:59:55,283 INFO [src.cryo_signal_enhance]     adding phase-flip to pipeline...
+2023-02-06 02:59:55,288 INFO [src.cryo_signal_enhance]     adding downsample to pipeline (28->28)...
+2023-02-06 02:59:57,053 INFO [src.cryo_signal_enhance]     estimating white noise...
+2023-02-06 02:59:57,131 INFO [src.cryo_signal_enhance]     adding whiten to pipeline...
+2023-02-06 03:00:10,646 INFO [src.cryo_signal_enhance]     received 5000 coefficient vectors of size 238...
+2023-02-06 03:07:09,329 INFO [src.cryo_signal_enhance]     Preparing starfile in the correct format...
+2023-02-06 03:07:09,849 INFO [src.cryo_signal_enhance]     adding phase-flip to pipeline...
+2023-02-06 03:07:09,853 INFO [src.cryo_signal_enhance]     adding downsample to pipeline (28->28)...
+2023-02-06 03:07:11,636 INFO [src.cryo_signal_enhance]     estimating white noise...
+2023-02-06 03:07:11,711 INFO [src.cryo_signal_enhance]     adding whiten to pipeline...
+2023-02-06 03:07:12,966 INFO [src.cryo_signal_enhance]     received 5000 coefficient vectors of size 238...

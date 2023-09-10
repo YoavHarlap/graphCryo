@@ -1,0 +1,21 @@
+2023-09-06 16:45:37,110 CRITICAL module 'src.aspire' has no attribute 'source'
+Traceback:
+  File "/home/yoavharlap/PycharmProjects/graphCryo/guy_and_big_dataset.py", line 48, in <module>
+    CreateStarFileFromImages_WithoutCTFData(starfile_fullpath, imgs)
+  File "/scratch/guysharon/Work/CryoEMSignalEnhancement/src/cryo_signal_enhance.py", line 1028, in CreateStarFileFromImages_WithoutCTFData
+    from src.aspire.image import Image
+  File "/scratch/guysharon/Work/CryoEMSignalEnhancement/src/aspire/image/__init__.py", line 1, in <module>
+    from .image import (
+  File "/scratch/guysharon/Work/CryoEMSignalEnhancement/src/aspire/image/image.py", line 4, in <module>
+    import src.aspire.source.mrcfile as mrcfile
+  File "/scratch/guysharon/Work/CryoEMSignalEnhancement/src/aspire/source/__init__.py", line 3, in <module>
+    from src.aspire.source.coordinates import BoxesCoordinateSource, CentersCoordinateSource
+  File "/scratch/guysharon/Work/CryoEMSignalEnhancement/src/aspire/source/coordinates.py", line 7, in <module>
+    import src.aspire.source.mrcfile
+  File "/scratch/guysharon/Work/CryoEMSignalEnhancement/src/aspire/source/mrcfile/__init__.py", line 66, in <module>
+    from .load_functions import new, open, open_async, mmap, new_mmap
+  File "/scratch/guysharon/Work/CryoEMSignalEnhancement/src/aspire/source/mrcfile/load_functions.py", line 20, in <module>
+    from .bzip2mrcfile import Bzip2MrcFile
+  File "/scratch/guysharon/Work/CryoEMSignalEnhancement/src/aspire/source/mrcfile/bzip2mrcfile.py", line 23, in <module>
+    import src.aspire.source.mrcfile as mrcfile
+

@@ -1,0 +1,7 @@
+2023-09-06 21:47:29,020 CRITICAL disable() missing 1 required positional argument: 'level'
+Traceback:
+  File "/home/yoavharlap/PycharmProjects/graphCryo/guy_and_big_dataset.py", line 75, in <module>
+    PrepareOpts(starfile_fullpath, writeable_dir, opts)
+  File "/scratch/guysharon/Work/CryoEMSignalEnhancement/src/cryo_signal_enhance.py", line 97, in PrepareOpts
+    logging.disable()
+

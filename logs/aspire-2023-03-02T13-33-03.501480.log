@@ -1,0 +1,68 @@
+2023-03-02 13:33:03,502 DEBUG [root] ASPIRE configuration directory is /home/yoavharlap/.config/ASPIRE
+2023-03-02 13:33:03,502 DEBUG [root] ASPIRE configuration resolution details [({'logging': {'log_dir': '/scratch/home/yoavharlap/PycharmProjects/graphCryo/logs'}}, ConfigSource(<super: <class 'ConfigSource'>, <ConfigSource object>>, None, False, False)), ({}, ConfigSource(<super: <class 'ConfigSource'>, <YamlSource object>>, '/home/yoavharlap/.config/ASPIRE/config.yaml', False, False)), ({'version': '0.10.1', 'common': OrderedDict([('numeric', 'numpy'), ('fft', 'pyfftw')]), 'logging': OrderedDict([('log_dir', 'logs'), ('log_exceptions', 1), ('tqdm_disable', False), ('console_level', 'INFO'), ('log_file_level', 'DEBUG'), ('log_prefix', 'aspire')]), 'nufft': OrderedDict([('backends', ['cufinufft', 'finufft', 'pynfft'])]), 'ray': OrderedDict([('temp_dir', '/tmp/ray')])}, ConfigSource(<super: <class 'ConfigSource'>, <YamlSource object>>, '/home/yoavharlap/.local/lib/python3.8/site-packages/aspire/config_default.yaml', True, False))]
+2023-03-02 13:33:03,504 DEBUG [root] Resolved config.yaml:
+
+logging:
+    log_dir: /scratch/home/yoavharlap/PycharmProjects/graphCryo/logs
+    log_exceptions: 1
+    tqdm_disable: no
+    console_level: INFO
+    log_file_level: DEBUG
+    log_prefix: aspire
+version: 0.10.1
+common:
+    numeric: numpy
+    fft: pyfftw
+
+nufft:
+    backends: [cufinufft, finufft, pynfft]
+
+ray:
+    temp_dir: /tmp/ray
+
+
+2023-03-02 13:33:09,105 INFO [aspire.volume.volume] /scratch/guysharon/Work/datafiles/volrefs/emd_2660.map with dtype float32 loaded as <class 'numpy.float64'>
+2023-03-02 13:33:09,250 INFO [__main__] Original volume map data shape: (1, 360, 360, 360) dtype:float64
+2023-03-02 13:33:26,288 INFO [__main__] Initialize CTF filters.
+2023-03-02 13:33:26,290 INFO [aspire.source.image] Creating Simulation with 1402 images.
+2023-03-02 13:33:26,322 INFO [aspire.source.image] save metadata into STAR file
+2023-03-02 13:33:26,342 INFO [aspire.storage.starfile] Created StarFile with blocks: 
+2023-03-02 13:33:26,362 INFO [aspire.source.image] save images into MRCS file
+2023-03-02 13:33:26,400 INFO [aspire.source.image] Saving ImageSource[0-1401] to /home/yoavharlap/work/starfile_0_1401.mrcs
+2023-03-02 13:33:26,435 DEBUG [aspire.nufft] nufft passed real_type for signal, converting
+2023-03-02 13:33:26,436 INFO [aspire.nufft] Trying NFFT backend cufinufft
+2023-03-02 13:33:26,985 INFO [aspire.nufft] NFFT backend cufinufft usable.
+2023-03-02 13:33:26,985 INFO [aspire.nufft] Trying NFFT backend finufft
+2023-03-02 13:33:26,988 INFO [aspire.nufft] NFFT backend finufft usable.
+2023-03-02 13:33:26,988 INFO [aspire.nufft] Trying NFFT backend pynfft
+2023-03-02 13:33:26,989 INFO [aspire.nufft] NFFT backend pynfft not usable:
+	No module named 'pynfft'
+2023-03-02 13:33:26,989 INFO [aspire.nufft] Selected NFFT backend = cufinufft.
+2023-03-02 13:33:27,928 INFO [aspire.nufft.cufinufft] Converting cufinufft gpu_method=1 from default of 2 for 3D1 transform,to support computation in double precision with tol=1e-08.
+2023-03-02 13:33:30,372 CRITICAL [root] The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+Traceback:
+  File "/home/yoavharlap/PycharmProjects/graphCryo/noise.py", line 212, in <module>
+    tmp = src.save("/home/yoavharlap/work/starfile.star", overwrite=True, batch_size=150000)
+  File "/home/yoavharlap/.local/lib/python3.8/site-packages/aspire/source/image.py", line 598, in save
+    self.save_images(
+  File "/home/yoavharlap/.local/lib/python3.8/site-packages/aspire/source/image.py", line 762, in save_images
+    datum = self.images[i_start:i_end].asnumpy().astype("float32")
+  File "/home/yoavharlap/.local/lib/python3.8/site-packages/aspire/source/image.py", line 83, in __getitem__
+    return self.fun(indices)
+  File "/home/yoavharlap/.local/lib/python3.8/site-packages/aspire/source/simulation.py", line 258, in _images
+    im = self.projections[indices]
+  File "/home/yoavharlap/.local/lib/python3.8/site-packages/aspire/source/image.py", line 83, in __getitem__
+    return self.fun(indices)
+  File "/home/yoavharlap/.local/lib/python3.8/site-packages/aspire/source/simulation.py", line 229, in _projections
+    im_k = self.vols.project(vol_idx=k - 1, rot_matrices=rot)
+  File "/home/yoavharlap/.local/lib/python3.8/site-packages/aspire/volume/volume.py", line 235, in project
+    im_f = nufft(data, pts_rot) / self.resolution
+  File "/home/yoavharlap/.local/lib/python3.8/site-packages/aspire/nufft/__init__.py", line 222, in nufft
+    plan = Plan(sz=sz, fourier_pts=fourier_pts, ntransforms=ntransforms)
+  File "/home/yoavharlap/.local/lib/python3.8/site-packages/aspire/nufft/cufinufft.py", line 90, in __init__
+    self._transform_plan.set_pts(*self.fourier_pts_gpu)
+  File "/home/yoavharlap/miniconda3/envs/aspire_dev/lib/python3.8/site-packages/cufinufft/cufinufft.py", line 183, in set_pts
+    if ky and ky.dtype != self.dtype:
+  File "/home/yoavharlap/miniconda3/envs/aspire_dev/lib/python3.8/site-packages/pycuda/gpuarray.py", line 409, in __bool__
+    raise ValueError("The truth value of an array with "
+
