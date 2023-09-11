@@ -15,6 +15,25 @@ import random
 from scipy.stats import bernoulli
 from scipy import ndimage
 
+def nearest_neighbor_10(labels, adj_matrix, num_labeled,n_labeled, n_unlabeled):
+    num_samples = num_labeled + n_unlabeled
+    #nearest_neighbor_labels = np.empty(num_samples, dtype=int)
+
+    predicted_labels = np.empty(n_unlabeled)
+
+    for i in range(n_unlabeled):
+        # Calculate the distances from the current unlabeled sample to all labeled samples
+        distances = adj_matrix[i+n_labeled, :num_labeled]
+
+        # Find the indices of the 10 nearest labeled samples
+        nearest_indices = np.argsort(distances)[:10]
+
+        # Assign the label that occurs most frequently among the 10 nearest neighbors
+        predicted_labels[i] =  np.median(labels[nearest_indices].astype(int))
+        
+    return predicted_labels
+
+
 def adj_matrix_analysis(adj_matrix, true_labels):
     good_array = []
     outliers_arr = []
@@ -229,6 +248,24 @@ def get_indexes_k_nearest_row_neighbor_from_labeled(i,k,adj_matrix, n_labeled, n
     line = adj_matrix[i,:n_labeled]
     neighbor_indexes = np.argpartition(line, -k)[-k:]  
     return neighbor_indexes
+
+
+def nearest_neighbor(labels, adj_matrix, n_labeled, n_unlabeled):
+    # Initialize the predicted labels for unlabeled samples
+    predicted_labels = np.copy(labels)
+    
+    # Extract the similarity matrix between labeled and unlabeled samples
+    similarity_matrix = adj_matrix[:n_labeled, n_labeled:n_labeled + n_unlabeled]
+    
+    # Find the nearest labeled sample for each unlabeled sample
+    nearest_labeled_indices = np.argmax(similarity_matrix, axis=0)
+    
+    # Assign labels to unlabeled samples based on their nearest labeled neighbors
+    predicted_labels = labels[nearest_labeled_indices]
+    
+    return predicted_labels
+
+
 
 def nearest_neighbor_from_labeled(labels,adj_matrix, n_labeled, n_unlabeled):
     labels1 = labels.copy()
