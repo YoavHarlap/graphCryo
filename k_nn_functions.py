@@ -186,7 +186,7 @@ def calc_similarity_matrix(imgs):
 
         #   PREPROCESSING
         "downsample":           89,
-        #"downsample": img_size,
+        "downsample": img_size,
         "batch_size": 2 ** 15,
         "num_coeffs": 1500,
         'preprocess_flags': [1, 1, 0, 0, 0],

@@ -9,6 +9,10 @@ step_size = 100  # Adjust this step size as needed
 outliers_file_path = "/data/yoavharlap/10028_classification/outliers_images.npy"
 particles_file_path = "/data/yoavharlap/10028_classification/particles_images.npy"
 
+outliers_file_path = "/data/yoavharlap/10028_classification/one_images.npy"
+particles_file_path = "/data/yoavharlap/10028_classification/zero_images.npy"
+
+
 outliers_data = np.load(outliers_file_path)
 particles_data = np.load(particles_file_path)
 data = np.concatenate((outliers_data, particles_data), axis=0)
@@ -48,7 +52,7 @@ is_labeled = np.zeros(total_samples, dtype=bool)
 steps_num = 10
 num_labeled_array = np.linspace(10, n_labeled, steps_num).astype(int)
 
-for num_labeled in num_labeled_array:
+for num_labeled in num_labeled_array[:]:
     total_samples_2 = num_labeled + n_unlabeled
     # Determine which samples to label in this iteration
     num_new_labeled = num_labeled - np.sum(is_labeled[:num_labeled])
