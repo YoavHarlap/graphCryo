@@ -27,7 +27,7 @@ true_labels = true_labels[:n_labeled+n_unlabeled]
 total_samples = len(true_labels)
 
 filtered_images = np.empty_like(imgs)
-sigma = 20
+sigma = 0
 for i in range(len(imgs)):
     filtered_image = ndimage.gaussian_filter(imgs[i], sigma=sigma)
     filtered_images[i] = filtered_image
@@ -45,8 +45,10 @@ sum_errors_nn_10_list = []  # Initialize for 10-NN
 
 # Initialize an array to keep track of which samples are labeled
 is_labeled = np.zeros(total_samples, dtype=bool)
+steps_num = 10
+num_labeled_array = np.linspace(10, n_labeled, steps_num).astype(int)
 
-for num_labeled in range(10, n_labeled + 1, step_size):
+for num_labeled in num_labeled_array:
     total_samples_2 = num_labeled + n_unlabeled
     # Determine which samples to label in this iteration
     num_new_labeled = num_labeled - np.sum(is_labeled[:num_labeled])
@@ -64,11 +66,11 @@ for num_labeled in range(10, n_labeled + 1, step_size):
     #labels2 = np.zeros(total_samples)
     #labels2[is_labeled] = true_labels[is_labeled]
     
-    nearest_neighbor_labels2 = nearest_neighbor(labels, adj_matrix, num_labeled, n_unlabeled)
+    nearest_neighbor_labels = nearest_neighbor(labels, adj_matrix, num_labeled, n_unlabeled)
     
     #nearest_neighbor_labels2 = np.concatenate((np.zeros(num_labeled),nearest_neighbor_labels2))
     
-    errors_indexes_nn2 = np.where(np.not_equal(nearest_neighbor_labels2, true_labels[n_labeled:]))
+    errors_indexes_nn2 = np.where(np.not_equal(nearest_neighbor_labels, true_labels[n_labeled:]))
 
     # Calculate the sum of errors for both approaches
     #sum_errors_nn = len(errors_indexes_nn[0])
@@ -83,8 +85,12 @@ for num_labeled in range(10, n_labeled + 1, step_size):
     # Concatenate zeros to match sizes
     #nearest_neighbor_labels_10 = np.concatenate((np.zeros(num_labeled), nearest_neighbor_labels_10))
     
+    
+    errors_indexes_nn_10 = np.where(np.not_equal(nearest_neighbor_labels_10, true_labels[n_labeled:]))
+    
+    
     # Calculate the sum of errors for 10-NN approach
-    sum_errors_nn_10 = len(np.where(np.not_equal(nearest_neighbor_labels_10, true_labels[n_labeled:]))[0])
+    sum_errors_nn_10 = len(errors_indexes_nn_10[0])
     
     # Append the sum of errors to the list for 10-NN
     sum_errors_nn_10_list.append(sum_errors_nn_10)
@@ -94,9 +100,12 @@ for num_labeled in range(10, n_labeled + 1, step_size):
     
     
 # Plot the sum of errors for each approach
-plt.plot(range(10, n_labeled + 1, step_size), sum_errors_nn2_list, label="Nearest Neighbor 2")
-plt.plot(range(10, n_labeled + 1, step_size), sum_errors_nn_10_list, label="10-NN")
+plt.plot(num_labeled_array, sum_errors_nn2_list, label="Nearest Neighbor")
+plt.plot(num_labeled_array, sum_errors_nn_10_list, label="10-NN")
 plt.xlabel("Number of Labeled Samples")
 plt.ylabel("Sum of Errors")
 plt.legend()
 plt.show()
+
+labels = np.concatenate((true_labels[:n_labeled],nearest_neighbor_labels))
+visual_error_2(n_labeled, n_unlabeled, adj_matrix, labels, true_labels, imgs)

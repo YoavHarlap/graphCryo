@@ -17,7 +17,6 @@ from scipy import ndimage
 
 def nearest_neighbor_10(labels, adj_matrix, num_labeled,n_labeled, n_unlabeled):
     num_samples = num_labeled + n_unlabeled
-    #nearest_neighbor_labels = np.empty(num_samples, dtype=int)
 
     predicted_labels = np.empty(n_unlabeled)
 
@@ -28,6 +27,7 @@ def nearest_neighbor_10(labels, adj_matrix, num_labeled,n_labeled, n_unlabeled):
         # Find the indices of the 10 nearest labeled samples
         nearest_indices = np.argsort(distances)[:10]
 
+        print(labels[nearest_indices].astype(int))
         # Assign the label that occurs most frequently among the 10 nearest neighbors
         predicted_labels[i] =  np.median(labels[nearest_indices].astype(int))
         
