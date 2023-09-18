@@ -9,8 +9,8 @@ step_size = 100  # Adjust this step size as needed
 outliers_file_path = "/data/yoavharlap/10028_classification/outliers_images.npy"
 particles_file_path = "/data/yoavharlap/10028_classification/particles_images.npy"
 
-outliers_file_path = "/data/yoavharlap/10028_classification/one_images.npy"
-particles_file_path = "/data/yoavharlap/10028_classification/zero_images.npy"
+#outliers_file_path = "/data/yoavharlap/10028_classification/one_images.npy"
+#particles_file_path = "/data/yoavharlap/10028_classification/zero_images.npy"
 
 
 outliers_data = np.load(outliers_file_path)
@@ -31,7 +31,7 @@ true_labels = true_labels[:n_labeled+n_unlabeled]
 total_samples = len(true_labels)
 
 filtered_images = np.empty_like(imgs)
-sigma = 0
+sigma = 20
 for i in range(len(imgs)):
     filtered_image = ndimage.gaussian_filter(imgs[i], sigma=sigma)
     filtered_images[i] = filtered_image
@@ -61,7 +61,7 @@ for num_labeled in num_labeled_array[:]:
     # Update the is_labeled array to mark the newly labeled samples
     is_labeled[labeled_indices] = True
 
-    labels = np.zeros(total_samples)
+    labels = np.empty(total_samples)
     labels[is_labeled] = true_labels[is_labeled]
 
     #nearest_neighbor_labels = nearest_neighbor_from_labeled(labels, adj_matrix, num_labeled, n_unlabeled)
@@ -70,7 +70,7 @@ for num_labeled in num_labeled_array[:]:
     #labels2 = np.zeros(total_samples)
     #labels2[is_labeled] = true_labels[is_labeled]
     
-    nearest_neighbor_labels = nearest_neighbor(labels, adj_matrix, num_labeled, n_unlabeled)
+    nearest_neighbor_labels = nearest_neighbor(labels, adj_matrix, num_labeled, n_labeled,n_unlabeled)
     
     #nearest_neighbor_labels2 = np.concatenate((np.zeros(num_labeled),nearest_neighbor_labels2))
     
@@ -83,8 +83,9 @@ for num_labeled in num_labeled_array[:]:
     # Append the sum of errors to the respective lists
     #sum_errors_nn_list.append(sum_errors_nn)
     sum_errors_nn2_list.append(sum_errors_nn2)
+    
     # Calculate nearest neighbor labels using 10-NN approach
-    nearest_neighbor_labels_10 = nearest_neighbor_10(labels, adj_matrix, num_labeled,n_labeled, n_unlabeled)
+    nearest_neighbor_labels_10 = nearest_neighbor_10(labels, adj_matrix, num_labeled,n_labeled, n_unlabeled,nearest_neighbor_labels,true_labels)
 
     # Concatenate zeros to match sizes
     #nearest_neighbor_labels_10 = np.concatenate((np.zeros(num_labeled), nearest_neighbor_labels_10))
@@ -108,8 +109,10 @@ plt.plot(num_labeled_array, sum_errors_nn2_list, label="Nearest Neighbor")
 plt.plot(num_labeled_array, sum_errors_nn_10_list, label="10-NN")
 plt.xlabel("Number of Labeled Samples")
 plt.ylabel("Sum of Errors")
+string = "sigma: " + str(sigma)
+plt.title(string)
 plt.legend()
 plt.show()
 
 labels = np.concatenate((true_labels[:n_labeled],nearest_neighbor_labels))
-visual_error_2(n_labeled, n_unlabeled, adj_matrix, labels, true_labels, imgs)
+#visual_error_2(n_labeled, n_unlabeled, adj_matrix, labels, true_labels, imgs)
