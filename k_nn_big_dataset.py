@@ -83,7 +83,6 @@ for num_labeled in num_labeled_array[:]:
     # Append the sum of errors to the respective lists
     #sum_errors_nn_list.append(sum_errors_nn)
     sum_errors_nn2_list.append(sum_errors_nn2)
-    
     # Calculate nearest neighbor labels using 10-NN approach
     nearest_neighbor_labels_10 = nearest_neighbor_10(labels, adj_matrix, num_labeled,n_labeled, n_unlabeled,nearest_neighbor_labels,true_labels)
 

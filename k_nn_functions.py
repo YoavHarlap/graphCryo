@@ -31,7 +31,7 @@ def nearest_neighbor(labels, adj_matrix,num_labeled, n_labeled, n_unlabeled):
     
     return predicted_labels
 
-def nearest_neighbor_10(labels, adj_matrix, num_labeled, n_labeled, n_unlabeled,nearest_neighbor_labels,true_labels,x):
+def nearest_neighbor_10(labels, adj_matrix, num_labeled, n_labeled, n_unlabeled,true_labels,x=4):
     num_samples = num_labeled + n_unlabeled
 
     predicted_labels = np.empty(n_unlabeled)
